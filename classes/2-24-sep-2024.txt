@@ -116,3 +116,6 @@ return this.counter;
 const [count,setCount]=useState(0)
 
 https://www.w3schools.com/REACT/react_es6.asp
+
+Spread operator
+de-structuring
