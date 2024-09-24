@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Master</title>
+</head>
+<body>
+    <h1>Product Master</h1>
+    <label>Code</label>
+    <input type="text" name="code" id="code"><br>
+    <label>Name</label>
+    <input type="text" name="name" id="name"><br>
+    <label>Supplier</label>
+    <input type="text" name="supplier" id="supplier"><br>
+    <label>Price</label>
+    <input type="text" name="price" id="price"><br>
+    <button onclick="addProduct()">Add Product</button><br>
+    <table id="display">
+    </table>
+    <script>
+    products=[]
+    function product(code,name,supplier,price){
+            this.code = code
+            this.name = name
+            this.supplier=supplier
+            this.price = price
+            this.info = function(){
+                return "code "+this.code+" name "+this.name +" supplier "+this.supplier+" price "+this.price
+            }
+    }
+
+    function addProduct(){
+        let code = document.getElementById("code").value
+        let name = document.getElementById("name").value
+        let supplier = document.getElementById("supplier").value
+        let price = document.getElementById("price").value
+
+        let prodobj = new product(code,name,supplier,price)
+        products.push(prodobj) 
+        console.log("products "+products)
+        reset()
+        displayProducts()
+    }
+
+    function displayProducts(){
+        let header = "<tr><td>Code</td><td>Name</td><td>Supplier</td><td>Price</td></tr>"
+        let tbldata=""
+        for (i=0;i<products.length;i++){
+            let product = products[i]
+            tbldata = tbldata+ `<tr><td>${product.code}</td><td>${product.name}</td><td>${product.supplier}</td><td>${product.price}</td><td><button onClick=deleteProduct(${product.code})>Delete</button></td><td><button onClick=editProduct(${product.code})>Edit</button></td></tr>`
+       
+        }
+        document.getElementById("display").innerHTML=header+tbldata
+    }
+
+    function reset(){
+        document.getElementById("code").value=''
+        document.getElementById("name").value=''
+        document.getElementById("supplier").value=''
+        document.getElementById("price").value=''
+ 
+    }
+
+    function deleteProduct(code){
+        console.log("delete product "+code)
+        products= products.filter((product)=>product.code !=code)
+        displayProducts()
+    }
+
+    function editProduct(code){
+        console.log("edit product "+code)
+        let producttoupd = products.filter((product)=>product.code == code)
+        console.log("product ",producttoupd)
+        document.getElementById("code").value=producttoupd[0].code
+        document.getElementById("name").value=producttoupd[0].name
+        document.getElementById("supplier").value=producttoupd[0].supplier
+        document.getElementById("price").value=producttoupd[0].price
+    }
+
+    </script>
+     
+</body>
+</html>

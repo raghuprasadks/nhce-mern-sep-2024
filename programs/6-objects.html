@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <script>
+        console.log("product object")
+        productobj={
+            code:1,
+            name:"mobile",
+            supplier:"nokia",
+            price:49494
+        }
+        console.log("single product ",productobj)
+        console.log("object constructor")
+        function product(code,name,supplier,price){
+            this.code = code
+            this.name = name
+            this.supplier=supplier
+            this.price = price
+            this.info = function(){
+                return "code "+this.code+" name "+this.name +" supplier "+this.supplier+" price "+this.price
+            }
+        }
+        prod1 = new product(1,'mobile','samsung',60000)
+        prod2 = new product(2,'tv','sony',70000)
+        products=[]
+        products.push(prod1)
+        products.push(prod2)
+        for(i=0;i<products.length;i++){
+           // console.log("name : " +products[i].name+ " price :"+products[i].price)
+            product = products[i]
+            console.log(product.info())
+        }
+    </script>
+</body>
+</html>

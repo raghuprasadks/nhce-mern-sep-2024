@@ -1,0 +1,16 @@
+1. Software required for MERN GPE
+
+a. Download and install visual studio code
+
+https://code.visualstudio.com/download
+b. Download and install node.js
+
+https://nodejs.org/en/download/prebuilt-installer
+
+c. Download and install mongodb
+https://www.mongodb.com/try/download/community
+
+d. Download mongodb compass
+
+https://www.mongodb.com/try/download/compass
+

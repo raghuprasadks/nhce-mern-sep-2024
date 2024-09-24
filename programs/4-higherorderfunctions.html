@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <h1>Higher Order Functions</h1>
+    <script>
+        marks=[10,15,23,8,24]
+        console.log('add a grace marks of 1')
+        for (i=0;i<marks.length;i++){
+            marks[i]=marks[i]+1
+        }
+        console.log('after the grace marks ',marks)
+        console.log('higher order function map')
+        function addgracemarks(mark,index,arry){
+            console.log("index ",index)
+            console.log('array ',arry)
+            return mark+1
+        }
+        marksupd = marks.map(addgracemarks)
+        console.log(marksupd)
+        console.log('map arrow function')
+        marksupd = marks.map((mark)=>mark+1)
+        console.log(marksupd)
+        console.log('filter with arrow function')
+        marksfiltered = marks.filter((mark)=>mark<15)
+        console.log("after filtering ",marksfiltered)
+    </script>
+</body>
+</html>

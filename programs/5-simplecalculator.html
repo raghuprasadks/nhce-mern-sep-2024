@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <label>Enter a number</label>
+    <input type="text" name="fn" id="fn"><br>
+    <label>Enter an operator(+,-,*,/)</label>
+    <input type="text" name="oper" id="oper"><br>
+    <label>Enter another number</label>
+    <input type="text" name="sn" id="sn"><br>
+    <button onclick="calculate()">Calculate</button>
+    <p id = "result"></p>   
+   
+  <script>
+    function calculate(){
+        //alert ('button is clicked')
+        let fn = parseInt(document.getElementById("fn").value)
+        let oper = document.getElementById("oper").value
+        let sn = parseInt(document.getElementById("sn").value)
+
+        console.log("fn ",fn)
+        console.log("oper ",oper)
+        console.log("sn ",sn)
+        let  output=''
+        let result=0;
+        if(oper=='+'){
+            result=fn+sn
+        } else if (oper=='-'){
+            result=fn-sn
+        }else if (oper=='*'){
+            result=fn*sn
+        }else if (oper=='/'){
+            result=fn/sn
+        }else{
+            result = 'invalid operator'
+        }
+        console.log("result is ",result)
+        output=fn+' '+oper+ ' '+sn+' = '+result
+        console.log("out put ",output)
+
+        document.getElementById("result").innerHTML=output
+    }
+  </script>  
+</body>
+</html>

@@ -1,0 +1,60 @@
+Agenda:
+1. Introduction to full stack web application development
+coding for front end and backend
+
+Front end - html/css/java script
+AJAX - Asynchronous Java Script and XML
+
+
+2. Options of Technology stacks
+
+Server side programming
+Java,JSP
+.NET,ASP
+PHP
+
+Full stack developer
+
+Python full stack developer
+HTML/CSS/JS/AJAX - python,flask,django
+
+Java Script - Jquery,salesjs
+React - Facebook - library
+Angular - Google - framework
+Vue.js
+Python fullstack
+React/angular - python,flask,django
+Java fullstack developer
+React/Angular - Java,Spring,Springboot,Spring JPA
+Web Services - REST
+
+Java Script
+
+only on the browser,html
+
+Java Script Server side run time environment - node.js
+
+asynchronous programming
+
+Hands-on
+1. create programs folder
+2. open terminal
+3. code .
+
+1. Data types
+2. Functions
+regular and arrow functions
+3. Arrays
+4. Higher Order Functions
+5. Simple Calculator
+6. Object,Object Constructors
+7. Product Master
+8. AJAX
+
+
+
+
+
+
+
+

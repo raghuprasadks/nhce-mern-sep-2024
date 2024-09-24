@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <script>
+        marks = [10,16,20,25,14,24]
+        console.log("marks array ",marks)
+        console.log("add an element to an array ")
+        marks.push(21)
+        marks.push(22)
+        console.log("looping")
+        for (i=0;i<marks.length;i++){
+            console.log(marks[i])
+        }
+        marks.pop()
+        console.log("after pop ",marks)
+        console.log('for each')
+        marks.forEach(mark => {
+            console.log(mark)            
+        });
+        marks.unshift(17)
+        console.log("after unshift ",marks)
+        marks.shift()
+        console.log("after shift ",marks)
+    </script>
+</body>
+</html>
