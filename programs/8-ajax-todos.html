@@ -8,6 +8,14 @@
 <body onload="getTodos()">
 
     <h1>Todos</h1>
+    <label>User Id</label>
+    <input type="text" id="userId">
+    <label>Title</label>
+    <input type="text" id="title">
+    <label>Completed</label>
+    <input type="checkbox" id="completed">
+    <button onclick="addTodos()">Add</button>
+
     <table id="display">
 
     </table>
@@ -40,6 +48,54 @@
         }
         document.getElementById("display").innerHTML=header+tbldata
 
+        }
+
+        function deleteTodos(){
+            let url = 'https://jsonplaceholder.typicode.com/todos/1'
+            fetch(url,{
+                method:'DELETE'
+            })
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch((error)=>console.log(error))
+        }
+
+        function addTodos(){
+            let url = 'https://jsonplaceholder.typicode.com/todos'
+            let data = {
+                userId:document.getElementById("userId").value,
+                title:document.getElementById("title").value,
+                completed:document.getElementById("completed").value
+            }
+            fetch(url,{
+                method:'POST',
+                body:JSON.stringify(data),
+                headers:{
+                    'Content-type':'application/json; charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch((error)=>console.log(error))
+        }
+
+        function updateTodo(){
+            let url = 'https://jsonplaceholder.typicode.com/todos/1'
+            let data = {
+                userId:1,
+                title:"Updated Todo",
+                completed:true
+            }
+            fetch(url,{
+                method:'PUT',
+                body:JSON.stringify(data),
+                headers:{
+                    'Content-type':'application/json; charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(json => console.log(json))
+            .catch((error)=>console.log(error))
         }
     </script>
     

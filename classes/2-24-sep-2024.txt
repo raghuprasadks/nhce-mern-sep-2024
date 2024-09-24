@@ -68,11 +68,15 @@ https://jsonplaceholder.typicode.com/users/1
 https://jsonplaceholder.typicode.com/todos
 fetchapi
 
-promise
+promise - success
+reject
 
 
 
+https://jsonplaceholder.typicode.com/users
 
+Display following fields
+name,email,city,company name
 
 
 
