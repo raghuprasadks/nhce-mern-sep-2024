@@ -1,0 +1,81 @@
+Agenda:
+
+1. AJAX
+download postman windows app
+https://www.postman.com/downloads/
+Asynchronous Java Script and XML
+
+backend - get the information from the back end
+post the information
+CRUD
+C - Create
+R - Read
+U - Update
+D - Delete
+
+AJAX - 
+https://www.w3schools.com/js/js_ajax_intro.asp
+Modern Browsers (Fetch API)
+API - Application Programming interface
+WebAPI 
+html,xml,json
+JSON - Java Script Object Notation
+JS
+product={
+code:1,
+name:"mobile",
+price:44884
+}
+
+JSON
+product={
+"code":1,
+"name":"mobile",
+"price":44884
+}
+
+
+products=[
+{
+"code":1,
+"name":"mobile",
+"price":44884
+},
+{
+"code":2,
+"name":"tv",
+"price":54884
+}
+
+]
+
+
+fakeapi
+jsonplaceholdertypi.com
+
+end point
+https://jsonplaceholder.typicode.com/users
+
+get,post
+https://jsonplaceholder.typicode.com/users
+
+to get only one user
+https://jsonplaceholder.typicode.com/users/1
+
+delete
+https://jsonplaceholder.typicode.com/users/1
+
+https://jsonplaceholder.typicode.com/todos
+fetchapi
+
+promise
+
+
+
+
+
+
+
+Sports
+
+2. React
