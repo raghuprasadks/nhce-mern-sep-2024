@@ -103,3 +103,16 @@ ES7+ React/Redux/React-Native snippets
 
 rafc
 rafce
+
+private int counter = 0;
+public void setCounter(int counter){
+	this.counter = counter+1
+}
+
+public int getCounter(){
+return this.counter;
+}
+
+const [count,setCount]=useState(0)
+
+https://www.w3schools.com/REACT/react_es6.asp

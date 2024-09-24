@@ -5,6 +5,7 @@ import Content from './Content';
 import Products from './Products';
 import { Users } from './Users';
 import Counter from './components/Counter';
+import Customers from './components/Customers';
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
       <Content/>
       <Products></Products>
       <Users/>
+      <Counter/>
        */}
-       <Counter/>
+       <Customers/>
+       
     </div>
       
   );
