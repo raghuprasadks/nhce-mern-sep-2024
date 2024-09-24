@@ -83,3 +83,23 @@ name,email,city,company name
 Sports
 
 2. React
+
+download and install node.js
+check version of node.js
+open terminal
+node --version
+node
+
+
+create react project
+npx create-react-app <appname>
+npx create-react-app reactbasics
+
+cd reactbasics
+open in visual studio code
+in the terminal
+npm start
+ES7+ React/Redux/React-Native snippets
+
+rafc
+rafce
