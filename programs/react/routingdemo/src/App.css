@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+/* styles.css */
+
+/* Style for the navigation bar */
+nav {
+  background-color:blue;
+  padding: 1rem;
+}
+
+/* Style for the unordered list */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style for the list items */
+nav ul li {
+  display: inline;
+}
+
+/* Style for the links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Change link color on hover */
+nav ul li a:hover {
+  background-color: #575757;
+}
