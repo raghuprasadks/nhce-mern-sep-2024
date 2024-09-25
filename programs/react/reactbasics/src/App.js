@@ -9,6 +9,7 @@ import Customers from './components/Customers';
 import IPL from './components/IPL';
 import Students from './components/Students';
 import { useState } from 'react';
+import AxiosDemo from './components/AxiosDemo';
 
 function App() {
 
@@ -42,6 +43,11 @@ function App() {
     console.log(students)
   }
 
+  const deleteStudent=(id)=>{
+    let studentlist = students.filter((student)=>student.id!==id)
+    setStudents(studentlist)
+  } 
+
   return (
     <div>
       {/**
@@ -55,10 +61,11 @@ function App() {
       <Counter/>
         <Customers/>
           <IPL data={ipldata}/>
+          <Students addstudents={addStudent} studentslist ={students} delStudent={deleteStudent}/>
+ 
        */}
       
-        <Students addstudents={addStudent} studentslist ={students}/>
-        
+               <AxiosDemo/>
        
     </div>
       

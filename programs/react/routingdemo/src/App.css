@@ -36,37 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-.table{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-.header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-thead{
-  background-color: #7ebc38;
-  color: white;
-}
-tbody{
-  background-color: #282c34;
-  color: white;     
-}
-
-body{
-  background-color: lightblue;
-}

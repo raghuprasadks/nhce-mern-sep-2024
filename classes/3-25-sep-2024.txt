@@ -17,11 +17,11 @@ node-modules
 public
 src
 package.json
-1. Properties
+1. Properties - done
 <img src="react.png"></img>
 parent - chile
 app.js
-2. Parent child communication
+2. Parent child communication - done
 
 Student
 
@@ -31,5 +31,34 @@ course
 
 
 3. useEffect,useContext hooks
-4. CSS in React
+fetch api,
+axios - connect with bank end
+
+npmjs.com
+
+cd reactbasics folder
+
+npm i axios
+
+https://jsonplaceholder.typicode.com/posts
+
+
+
+
+
+4. CSS in React - done
 5. Routing
+
+
+npx create-react-app routingdemo
+
+cd routingdemo
+
+code .
+
+create components
+rafce - 
+
+npm i react-douter-dom
+
+

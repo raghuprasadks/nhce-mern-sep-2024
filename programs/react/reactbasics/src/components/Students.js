@@ -19,12 +19,17 @@ const Students = (property) => {
         setName('')
         setCourse('')
     }
+
+    const deleteStudent=(id)=>{
+        property.delStudent(id)
+        
+    }
     
 
   return (
     <>
-        <h1>Student Master</h1>
-        <div>
+        <h1 className='header'>Student Master</h1>
+        <div className="form">
             <label>Id:</label>
             <input type="text" value={id} onChange={(e)=>setId(e.target.value)}/>
             <label>Name:</label>
@@ -34,7 +39,7 @@ const Students = (property) => {
             <button onClick={addStudent}>Add Student</button>
 
         </div>
-        <div>
+        <div className="table">
             <h1>Students List</h1>
             <table>
                 <thead>
@@ -42,6 +47,7 @@ const Students = (property) => {
                         <th>Id</th>
                         <th>Name</th>
                         <th>Course</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,6 +58,7 @@ const Students = (property) => {
                                     <td>{student.id}</td>
                                     <td>{student.name}</td>
                                     <td>{student.course}</td>
+                                    <td><button onClick={()=>deleteStudent(student.id)}>Delete</button></td>
                                 </tr>
                             )
                         })
