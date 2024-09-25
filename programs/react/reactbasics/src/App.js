@@ -6,8 +6,32 @@ import Products from './Products';
 import { Users } from './Users';
 import Counter from './components/Counter';
 import Customers from './components/Customers';
+import IPL from './components/IPL';
 
 function App() {
+
+  const ipldata = [
+    {
+      "team":"CSK",
+      "captain":"Dhoni",
+      "home":"Chennai"
+    },
+    {
+      "team":"MI",
+      "captain":"Rohit",
+      "home":"Mumbai"
+    },
+    {
+      "team":"RCB",
+      "captain":"Kohli",
+      "home":"Bangalore"
+    },
+    {
+      "team":"KKR",
+      "captain":"Morgan",
+      "home":"Kolkata"
+    }
+  ]
   return (
     <div>
       {/**
@@ -19,8 +43,10 @@ function App() {
       <Products></Products>
       <Users/>
       <Counter/>
+        <Customers/>
        */}
-       <Customers/>
+        <IPL data={ipldata}/>
+        
        
     </div>
       

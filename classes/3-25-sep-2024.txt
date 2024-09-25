@@ -1,0 +1,27 @@
+Agenda:
+
+Recap:
+
+1.React
+
+Steps
+
+1. Install node.js
+2. cmd node --version
+3. create programs folder
+cd programs
+npx create-react-app <appname>
+npx create-react-app reactbasics
+folders
+node-modules
+public
+src
+package.json
+1. Properties
+<img src="react.png"></img>
+parent - chile
+app.js
+2. Parent child communication
+3. useEffect,useContext hooks
+4. CSS in React
+5. Routing
