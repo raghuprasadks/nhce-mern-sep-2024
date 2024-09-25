@@ -2,7 +2,7 @@ import React from 'react'
 
 const SignUp = () => {
   return (
-    <div>
+    <div className="signupclass">
         <h1>SignUp</h1>
         <label for="name">Name:</label><br/>
         <input type="text" id="name" name="name"/><br/>
