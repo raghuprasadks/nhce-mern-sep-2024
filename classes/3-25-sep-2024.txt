@@ -22,6 +22,14 @@ package.json
 parent - chile
 app.js
 2. Parent child communication
+
+Student
+
+id
+name
+course
+
+
 3. useEffect,useContext hooks
 4. CSS in React
 5. Routing

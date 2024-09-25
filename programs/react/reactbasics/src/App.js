@@ -7,6 +7,8 @@ import { Users } from './Users';
 import Counter from './components/Counter';
 import Customers from './components/Customers';
 import IPL from './components/IPL';
+import Students from './components/Students';
+import { useState } from 'react';
 
 function App() {
 
@@ -32,6 +34,14 @@ function App() {
       "home":"Kolkata"
     }
   ]
+
+  const [students,setStudents]=useState([])
+
+  const addStudent=(student)=>{
+    setStudents([...students,student])
+    console.log(students)
+  }
+
   return (
     <div>
       {/**
@@ -44,8 +54,10 @@ function App() {
       <Users/>
       <Counter/>
         <Customers/>
+          <IPL data={ipldata}/>
        */}
-        <IPL data={ipldata}/>
+      
+        <Students addstudents={addStudent} studentslist ={students}/>
         
        
     </div>
