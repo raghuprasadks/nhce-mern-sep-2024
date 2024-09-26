@@ -34,7 +34,141 @@ npm i -g nodemon
 
 to run the program
 
-nodemon <program name> 
+nodemon <program name>
+
+
+Develop product crud api using express
+
+input - id,name,supplier,price
+
+http://localhost:3000/product - all crud methods
+
+search by supplier 
+http://localhost:3000/product/supplier/:supplier
+
+search by price range 
+http://localhost:3000/product/price?min=<min>&max=<max>
+
+routing
+
+user
+roles
+
+app.js
+
+userRoute
+rolesRoute
+
+mongodb
+
+Database
+RDBMS 
+
+MySQL
+postgres
+oracle
+
+tables - structure
+primary key, foreign key
+
+unstructured data
+
+No-SQL  - Not Only SQL
+
+
+1. document database - Mongodb
+
+
+json
+
+product={
+id:1,
+name:'mobile',
+supplier:'samsung',
+price:494949
+}
+
+RDBMS + NoSQL
+
+horizontal scaling
+
+download and install mongodb server
+
+mongodb commands
+
+1. Display list of databases
+show dbs
+2. Use a specific database
+use merncsegpedb
+3. To display collections in a db
+
+show collections
+4. create a collection
+db.createCollection("products")
+5. Insert a document into a collection
+
+db.products.insertOne({code:1,name:"smart phone",supplier:"samsung",price:65000})
+
+add 5 to 6 products
+
+db.products.insertMany([{code:2,name:"smart phone",supplier:"vivo",price:55000},{code:3,name:"smart phone",supplier:"apple",price:120000},{code:4,name:"smart phone",supplier:"nokia",price:50000}])
+
+6. Display documents in a collection
+
+db.products.find()
+
+7. Search for a specific key
+db.products.find({supplier:'vivo'})
+
+8. Delete a document
+
+db.products.deleteOne({_id: ObjectId("66f5294108a327f67b467d5d")})
+db.products.deleteMany()
+
+9. Update a document
+db.products.updateOne(
+   { _id: ObjectId("60c72b2f9b1d8b3a4c8e4d1a") }, // Filter to find the document
+   { $set: { price: 150} } // Update operation
+)
+
+10 Display documents with formatting 
+db.products.find().pretty()
+
+11. project.. like select
+db.products.find({},{name:1,price:1})
+
+12. sort
+<order>: Sorting order. Use 1 for ascending and -1 for descending.
+db.products.find({}).sort({price:1})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 4. Mongodb
 commands
