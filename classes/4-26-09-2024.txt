@@ -1,0 +1,31 @@
+Agenda
+
+1. Node.js
+https://www.nextgenerationautomation.com/post/understand-node-js-single-thread-event-loop-work-flow
+2. Basics of Node.js
+create http server
+asynchronous handling of the requests
+modules in node.js
+
+Getting started with node.js
+
+a. create nodedemo folder
+b. cd nodedemo folder
+c. npm init
+d. create 1-gettingstarted.js
+e. node 1-gettingstarted.js
+
+external modules
+npmjs.com
+
+npm i upper-case
+
+
+"type":"module",
+
+in package.json
+3. Express.js
+Library build on top of node.js
+Development of API's
+4. Mongodb
+commands

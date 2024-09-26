@@ -1,0 +1,5 @@
+Testing node.js features
+
+1. Non blocking
+2. Single thread
+3. event loop
