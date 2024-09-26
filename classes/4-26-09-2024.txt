@@ -27,5 +27,14 @@ in package.json
 3. Express.js
 Library build on top of node.js
 Development of API's
+
+npm i express
+
+npm i -g nodemon
+
+to run the program
+
+nodemon <program name> 
+
 4. Mongodb
 commands
