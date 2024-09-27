@@ -56,6 +56,30 @@ const Customers = () => {
             getCustomers()
         })
     }
+
+    const editCustomer=(id)=>{
+        console.log("edit customers ",id)
+        let cutomertoedit = customers.find((customer)=>customer._id==id)
+        console.log("custoer to edit ",cutomertoedit)
+        setId(cutomertoedit._id)
+        setName(cutomertoedit.name)
+        setEmail(cutomertoedit.email)
+        setMobile(cutomertoedit.mobile)
+        setLocation(cutomertoedit.location)
+    }
+
+    const updateCustomer=(event)=>{
+        console.log('add Customer')
+        event.preventDefault()
+        let customer = {name,email,mobile,location}
+        axios.put(url+id,customer)
+        .then((data)=>{
+            console.log(data)
+            getCustomers()
+        })
+        .catch((error)=>console.log(error))
+        reset()
+    }
   
     return (
     <>
@@ -69,7 +93,8 @@ const Customers = () => {
         <input type="text" value={mobile} onChange={(e)=>setMobile(e.target.value)}/><br/>
         <label>Location</label>
         <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)}/><br/>
-        <button onClick={addCustomer}>Add Customer</button>   
+        <button onClick={addCustomer}>Add Customer</button> 
+        <button onClick={updateCustomer}>Update Customer</button>
         
     </div>
     <div>
@@ -81,6 +106,7 @@ const Customers = () => {
                     <th>Mobile</th>
                     <th>Location</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </theader>
             <tbody>
@@ -91,6 +117,7 @@ const Customers = () => {
                     <td>{customer.mobile}</td>
                     <td>{customer.location}</td>
                     <td><button onClick={()=>deleteCustomer(customer._id)}>Delete</button></td>
+                    <td><button onClick={()=>editCustomer(customer._id)}>Edit</button></td>
                 </tr>
                 )}
             </tbody>
