@@ -3,11 +3,13 @@ import axios from 'axios'
 
 const Customers = () => {
     const [id,setId]=useState()
-    const [name,setUser]=useState('')
+    const [name,setName]=useState('')
     const [email,setEmail]=useState('')
     const [mobile,setMobile]=useState()
+    const [location,setLocation]=useState('')
+
     const [customers,setCustomers]=useState([])
-    
+
     const url ='http://localhost:3000/customer/'
 
     const getCustomers=()=>{
@@ -22,11 +24,45 @@ const Customers = () => {
     useEffect(()=>{
         getCustomers()
     },[])
+
+    const addCustomer=(event)=>{
+        console.log('add Customer')
+        event.preventDefault()
+        let customer = {name,email,mobile,location}
+        axios.post(url,customer)
+        .then((data)=>{
+            console.log(data)
+            getCustomers()
+        })
+        .catch((error)=>console.log(error))
+        reset()
+    }
+
+    const reset=()=>
+    {
+        setName('')
+        setEmail('')
+        setMobile('')
+        setLocation('')
+    }
   
     return (
     <>
     <div>
         <h1>Customer Master</h1>
+        <label>Name</label>
+        <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/><br/>
+        <label>Email</label>
+        <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}/><br/>
+        <label>Mobile</label>
+        <input type="text" value={mobile} onChange={(e)=>setMobile(e.target.value)}/><br/>
+        <label>Location</label>
+        <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)}/><br/>
+
+
+        <button onClick={addCustomer}>Add Customer</button>
+        
+        
         
     </div>
     <div>
