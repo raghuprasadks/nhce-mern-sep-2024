@@ -45,6 +45,17 @@ const Customers = () => {
         setMobile('')
         setLocation('')
     }
+
+    const deleteCustomer=(id)=>{
+        console.log("delete customer ",id)
+        let delurl = url+id
+        console.log('delete url ',delurl)
+        axios.delete(delurl)
+        .then((data)=>{
+            console.log(data)
+            getCustomers()
+        })
+    }
   
     return (
     <>
@@ -58,11 +69,7 @@ const Customers = () => {
         <input type="text" value={mobile} onChange={(e)=>setMobile(e.target.value)}/><br/>
         <label>Location</label>
         <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)}/><br/>
-
-
-        <button onClick={addCustomer}>Add Customer</button>
-        
-        
+        <button onClick={addCustomer}>Add Customer</button>   
         
     </div>
     <div>
@@ -73,6 +80,7 @@ const Customers = () => {
                     <th>Email</th>
                     <th>Mobile</th>
                     <th>Location</th>
+                    <th>Delete</th>
                 </tr>
             </theader>
             <tbody>
@@ -82,6 +90,7 @@ const Customers = () => {
                     <td>{customer.email}</td>
                     <td>{customer.mobile}</td>
                     <td>{customer.location}</td>
+                    <td><button onClick={()=>deleteCustomer(customer._id)}>Delete</button></td>
                 </tr>
                 )}
             </tbody>
