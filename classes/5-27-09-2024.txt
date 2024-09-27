@@ -1,0 +1,54 @@
+Recap
+
+1.Java Script,React
+2. Node.js
+http,fs,events,url
+3. Express.js - API 
+WEB API
+product
+4. MongoDB -
+commands
+
+Agenda
+1.Customer api using express
+2. Create customer collection
+in mongodb
+3. CRUD using customer
+4. Front end using react
+5. Fullstack Application development
+a. create fullstack/api
+folder
+b. open api folder using visual studio code
+c. open terminal
+d. npm init
+package.json
+e. install express
+npm i express
+
+Customer api with mongodb
+
+npm i mongodb
+npm install cors
+
+front end
+call the back end api
+
+UI - port 1
+back  end - port 2
+
+CORS
+
+front end
+npx create-react-app ui
+
+create components folder
+create Customers.js
+npm i axios
+
+
+
+
+
+
+
+
