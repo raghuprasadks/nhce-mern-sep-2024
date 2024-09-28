@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './../SignUpUpdated.css';
 
 const SignUpUpdated = () => {
     const [name, setName] = useState('');
@@ -84,31 +85,34 @@ const SignUpUpdated = () => {
     };
 
     return (
-        <form onSubmit={signUp}>
+        <div className="signup-container">
+          <h2>Sign Up</h2>
+          <form onSubmit={signUp}>
             <div>
-                <label>Name:</label>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                {validationMessages.name && <span>{validationMessages.name}</span>}
+              <label>Name:</label>
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              {validationMessages.name && <span>{validationMessages.name}</span>}
             </div>
             <div>
-                <label>Email:</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                {validationMessages.email && <span>{validationMessages.email}</span>}
+              <label>Email:</label>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              {validationMessages.email && <span>{validationMessages.email}</span>}
             </div>
             <div>
-                <label>Mobile:</label>
-                <input type="text" value={mobile} onChange={(e) => setMobile(e.target.value)} />
-                {validationMessages.mobile && <span>{validationMessages.mobile}</span>}
+              <label>Mobile:</label>
+              <input type="text" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+              {validationMessages.mobile && <span>{validationMessages.mobile}</span>}
             </div>
             <div>
-                <label>Password:</label>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                {validationMessages.password && <span>{validationMessages.password}</span>}
+              <label>Password:</label>
+              <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+              {validationMessages.password && <span>{validationMessages.password}</span>}
             </div>
             <button type="submit">Sign Up</button>
             {message && <p>{message}</p>}
-        </form>
-    );
-};
-
-export default SignUpUpdated;
+          </form>
+        </div>
+      );
+    };
+    
+    export default SignUpUpdated;

@@ -1,19 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import Customers from './components/Customers';
-import SignUp from './components/SignUp';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Login from './components/Login';
 import SignUpUpdated from './components/SignUpUpdated';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <>
-    {/**
-    <Customers></Customers>
-    <SignUp></SignUp>
-     */}
-    <SignUpUpdated></SignUpUpdated>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="signup" element={<SignUpUpdated />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
