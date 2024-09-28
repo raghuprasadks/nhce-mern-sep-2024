@@ -1,0 +1,43 @@
+Agenda:
+
+1. Recap
+full stack
+a. API - using node,express,mongodb
+customer api
+npm init
+npm i express
+npm i mongodb
+npm i cors
+b.ui - customer crud operation
+npx create-react-app ui
+
+2. Sign Up and Login
+Pre-requisites - visual studio code,node,mongodb server,mongodb compass
+create fullstack/api folder
+open api in visual studio code
+open terminal
+npm init
+npm i express mongodb cors
+user.js
+post -method
+
+front end
+
+inside fullstack folder
+open terminal
+npx create-react-app ui
+
+backend enhancement
+
+encrypting password
+
+npm i bcrypt
+
+https://kaushalya.tech/
+
+https://ekaushalya.kaushalya.tech/
+
+
+3. Menu driven application
+4. Revision
+5. MCQ
